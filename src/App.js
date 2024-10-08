@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import HookUseEccect from './allHooks/HookUseEffect';
+import HookUseState from './allHooks/HookUseState';
+import HookUseMemo from './allHooks/HookUseMemo';
+import HookUseCallback from './allHooks/HookUseCallBack';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <HookUseState />
+      <HookUseEccect />
+      <HookUseMemo />
+      <HookUseCallback />
     </div>
   );
 }
