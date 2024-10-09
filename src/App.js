@@ -4,14 +4,16 @@ import HookUseEccect from './allHooks/HookUseEffect';
 import HookUseState from './allHooks/HookUseState';
 import HookUseMemo from './allHooks/HookUseMemo';
 import HookUseCallback from './allHooks/HookUseCallBack';
+import HookUseRef from './allHooks/HookUseRef';
 
 function App() {
   return (
     <div className='App'>
-      <HookUseState />
+      {/* <HookUseState />
       <HookUseEccect />
       <HookUseMemo />
-      <HookUseCallback />
+      <HookUseCallback /> */}
+      <HookUseRef />
     </div>
   );
 }
