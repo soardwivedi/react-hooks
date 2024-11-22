@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import HookUseState from './App';
 import reportWebVitals from './reportWebVitals';
+import Context from './allHooks/HookUseContext';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HookUseState />
+    <Context>
+      <App />
+    </Context>
+    {/* <HookUseState /> */}
   </React.StrictMode>
 );
 

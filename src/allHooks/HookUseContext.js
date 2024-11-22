@@ -1,18 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
-// useRef is more stable then the useEffect.
-function HookUseRef() {
-  const [count, setCount] = useState({
-    num: 1,
-    id: 'abcd'
-  });
-
-  const counrRef = useRef();
-
-  //   const renderRef = useRef(0);
-  //   useEffect(() => {
-  //     console.log('Component rendered', renderRef.current);
-  //     renderRef.current = renderRef.current + 1;
+import { useState, useEffect, useContext } from 'react';
+import { HookDemo } from '../Context';
+function HookUseContext() {
+  //   const [count, setCount] = useState({
+  //     num: 1,
+  //     id: 'abcd'
   //   });
+
+  const [count, setCount] = useContext(HookDemo);
 
   // function to set count immediately in the same function.
   // we can use below approach when you have to manulate the state immediately after set and before the render.
@@ -37,9 +31,9 @@ function HookUseRef() {
 
   return (
     <div className='App'>
-      <p> Use State Hook</p>
+      <p> Use Context Hook</p>
       <button onClick={() => handleSubstract()}>-</button>
-      <span ref={counrRef}>{count.num}</span>
+      <span>{count.num}</span>
       <button
         onClick={() => {
           handleAdd();
@@ -47,16 +41,8 @@ function HookUseRef() {
       >
         +
       </button>
-      {/* <p>{renderRef.current}</p> */}
-      <button
-        onClick={() => {
-          counrRef.current.innerHTML = '10';
-        }}
-      >
-        Change to 10
-      </button>
     </div>
   );
 }
 
-export default HookUseRef;
+export default HookUseContext;
